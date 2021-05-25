@@ -1,0 +1,17 @@
+version: "3.4"
+services: 
+    nodejs: #docker run -it -v ${PWD}:/work -w /work -p 3001:3001 aimvertor/csharp:1.0.0 /bin/sh
+        container_name: nodejs
+        image: nodejs:dev   #aimvector/nodejs:1.0.0 <- devopguy กำหนดไว้แต่เราเปลี่ยนของเรา
+        build: 
+            context: ./nodejs
+            target: debug
+        #working_dir: /work
+        #entrypoint: /bin/sh
+        #stdin_open: true
+        #tty: true
+        volumes: 
+            - ./nodejs/src/:/work/src   #For source codes
+        ports: 
+            - 3001:3001
+            - 9229:9229

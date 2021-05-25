@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  node-express:
+    build: .
+    image: nodejs:dev
+    container_name: node-dev1
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src

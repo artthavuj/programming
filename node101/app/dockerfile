@@ -1,0 +1,11 @@
+# Structure of files locations in the project in my pc
+# ./app/.package.json
+# ./app/.dockerignore
+# ./app/dockerfile
+# ./app/src/server.js
+#  
+FROM node:16-alpine3.12
+
+WORKDIR /app
+COPY . /app
+RUN npm install
