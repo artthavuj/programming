@@ -15,3 +15,14 @@ services:
         ports: 
             - 3001:3001
             - 9229:9229
+    nginx:
+        container_name: nginx
+        image: nginx:dev
+        build: 
+            context: ./nginx
+            target: dev
+        volumes: 
+            - ./nginx/src/:/usr/share/nginx/html/   #For source codes
+        ports: 
+            - 3002:80
+        
