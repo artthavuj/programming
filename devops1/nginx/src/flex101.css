@@ -1,0 +1,52 @@
+.container {
+
+    display: flex;
+  
+    /* ให้แกนหลักเป็นแนวตั้ง ทิศทางการไหลจึงไหลจากบนลงล่าง */
+  
+    flex-direction: column;
+  
+    color: #fff;
+  
+    font-weight: bold;
+  
+    text-align: center;
+  
+  }
+  
+  .header,
+  
+  .sidebar,
+  
+  .main,
+  
+  .footer {
+  
+    padding: 10px;
+    
+  
+  }
+  
+  .header {
+  
+    background: #8cc152;
+  
+  }
+  
+  .main {
+  
+    background: #f6bb42;
+  
+  }
+  
+  .sidebar {
+  
+    background: #e9573f;
+  
+  }
+  
+  .footer {
+  
+    background: #d770ad;
+  
+  }
