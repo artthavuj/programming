@@ -1,0 +1,21 @@
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: nowrap;*/
+    /* flex-flow: row wrap; */
+    /* justify-content: flex-end; */
+    /* align-items: flex-end;  ใช้แบบแนวนอน*/
+    /* align-content: center; ใช้กับ flex-wrap*/
+}
+
+.flex-item-1,.flex-item-2,.flex-item-3,.flex-item-4,.flex-item-5 {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 10px;
+}
+
+.flex-item-1{
+   flex-grow: 1;
+}

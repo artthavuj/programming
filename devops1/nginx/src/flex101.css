@@ -1,52 +1,61 @@
 .container {
 
-    display: flex;
-  
-    /* ให้แกนหลักเป็นแนวตั้ง ทิศทางการไหลจึงไหลจากบนลงล่าง */
-  
-    flex-direction: column;
-  
-    color: #fff;
-  
-    font-weight: bold;
-  
-    text-align: center;
-  
-  }
-  
-  .header,
-  
-  .sidebar,
-  
-  .main,
-  
-  .footer {
-  
-    padding: 10px;
-    
-  
-  }
-  
-  .header {
-  
-    background: #8cc152;
-  
-  }
-  
-  .main {
-  
-    background: #f6bb42;
-  
-  }
-  
-  .sidebar {
-  
-    background: #e9573f;
-  
-  }
-  
-  .footer {
-  
-    background: #d770ad;
-  
-  }
+  display: flex;
+
+  /* อีลีเมนต์ของเรามีการวางตัวจากซ้ายไปขวา */
+
+  flex-flow: row wrap;
+
+  color: #fff;
+
+  font-weight: bold;
+
+  text-align: center;
+
+}
+
+.container > * {
+
+  padding: 10px;
+
+}
+
+.header {
+
+  background: #8cc152;
+
+  /* โดยส่วน header ของเราจะกินพื้นที่ 100% พอดี (flex-basis เป็น 100%) */
+
+  flex: 1 100%;
+
+}
+
+.main {
+
+  background: #f6bb42;
+
+  /* ในขณะที่ main จะมีพื้นที่ราว 3/4 ส่วน */
+
+  flex: 3;
+
+}
+
+.sidebar {
+
+  background: #e9573f;
+
+  /* และพื้นที่ของ Sidebar เป็น 1 ใน 4 */
+
+  flex: 1;
+
+}
+
+.footer {
+
+  background: #d770ad;
+
+  /* footer จะมีพื้นที่ 100% เฉกเช่นที่ header เป็น */
+
+  flex: 1 100%;
+
+}
