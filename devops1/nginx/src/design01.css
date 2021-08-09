@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main {
@@ -9,6 +10,85 @@
     margin: 2rem auto;
     height: 560px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 50px;   /*9.28 เวลาในวิดีโอที่ดูค้าง*/
+    border-radius: 50px;   
+    /*overflow: hidden;*/ /*ถ้ากล่องลูกของมันเกินกล่องมันจะถูกตัดส่วนเกินออก*/
+    position: relative;
+}
+.tag {
+    position: absolute;
+    z-index: 999;
+    top: -15px;
+    background: tomato;
+    left: 50%;
+    transform: translate(-50%);
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.img {
+    height: 250px;
+    background-color: brown;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.contain {
+    text-align: center;
+    border-bottom: 2px solid #e5e5e5;
+    height: 250px;
+    display: flex;
+    justify-content: center;  /*จัดการแนวนอนโดย flex*/
+    align-items: center; /*จัดการแนวตั้งโดย flex*/    
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contain h3 {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.contain h1 {
+    margin: 1rem 0;
+}
+
+.contain p {
+    color: #9f9f9f;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* background: red; */
+    align-items: center;
+    height: 60px;
+}
+
+.ft-l {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.ft-l img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.footer p {
+    margin-left: 0.5rem;
+}
+
+.ft-r {
+    margin-right: 2rem;
+}

@@ -21,6 +21,11 @@ project นี้ เกี่ยวเนื่องใช้งาน image �
 แล้ว run ที่ pwd->./app/
 #docker-compose up -d --build
 
+การใช้ nginx dokcer ปกติ
+PS D:\Programming> code .
+PS D:\Programming> cd devops1
+PS D:\Programming\devops1> docker-compose up -d nginx
+
 
 ==================git================================================
 ////////////////////// ข้อความจาก repository ของ github.com //////////////////////////////////////////////////////////////////////
