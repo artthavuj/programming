@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayOject</title>
+</head>
+<body>
+    <h1>Array Object</h1><br>
+    <p>Example#1 Pure Date Object, How it return result.</p>
+    <p id="carlist">Show Car list</p>
+    <script>
+        const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+        document.getElementById("demo").innerHTML = d.toString();
+    </script>
+
+    <script>
+      // Example#1 st/////////////////////////////////////////////////////////////////////////
+        const cars = [
+                        { "color": "purple",
+                          "type": "minivan",
+                          "registration": dateToDateText(new Date('2017-01-03')),
+                          "capacity": 7
+                        },
+                        {
+                          "color": "red",
+                          "type": "station wagon",
+                          "registration": dateToDateText(new Date('2018-03-03')),
+                          "capacity": 5
+                        },
+                        {"color": "red",
+                          "type": "cabrio",
+                          "registration": dateToDateText(new Date('2016-05-02')),
+                          "capacity": 2
+                        }
+                    ];
+        let car_list ="";
+        cars.forEach(function (car) {
+             car_list = car_list + car.color + ' ' + car.type + ' ' + car.registration + ' ' + car.capacity +'<br>';
+        });
+
+        document.getElementById("carlist").innerHTML = car_list;
+
+        // The function for example#3 ("2015-03-25") 
+        function dateToDateText(date){
+            let myDate = date.getDate();
+            let myMonth = date.getMonth() + 1;
+            if(myDate < 10) { myDate = '0'+ myDate;}
+            if(myMonth < 10) { myMonth = '0'+ myMonth;}
+            return (date.getFullYear() + "-" + myMonth + "-" + myDate);
+        }
+    </script>
+</body>
+</html>

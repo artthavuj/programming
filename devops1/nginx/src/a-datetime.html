@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time</title>
+</head>
+<body>
+    
+    <hr>
+    Expected Date Time: 2015 03 25  15:35:00" <br>
+    Specified date and times: <br>
+    Format#1: (year, month, day) -> (2015,2,25) <br>
+    <p id="exam1o">Ex#1output: </p>
+    Format#2: (year, month, day, hours, minutes, seconds, milliseconds) -> (2015,2,25,15,35,0,0) <br>
+    <p id="exam2o">Ex#2output: </p>
+    <br>
+    Date String<br>
+    JavaScript UTC Date <br>
+    Format#1 ("YYYY-MM-DD") -> ("2015-03-25") <br>
+    <p id="exam3o">Ex#3output: </p>
+    Format#2 ("YYYY-MM-DDTHH:MM:SSZ") ("2015-03-25T12:00:00Z")<br>
+    <p id="exam4o">Ex#4output: </p>
+    <br>
+    Short Dates <br>
+    Format#1 ("MM/DD/YYYY") -> ("03/25/2015") <br>
+    <p id="exam5o">Ex#5output: </p>
+    <hr>
+
+    <script>
+        document.getElementById("exam1o").innerHTML += dateToDateText(new Date(2015,2,25));
+        document.getElementById("exam2o").innerHTML += dateToDateText(new Date(2015,2,25,15,35,0,0));
+        // document.getElementById("exam3o").innerHTML += new Date("2015-03-25");
+        document.getElementById("exam3o").innerHTML += dateToDateText(new Date("2015-03-25"));
+        document.getElementById("exam4o").innerHTML += dateToDateText(new Date("2015-03-25T12:00:00Z"));
+        document.getElementById("exam5o").innerHTML += dateToDateText(new Date("03/25/2015"));
+
+        // The function for example#3 ("2015-03-25") 
+        function dateToDateText(date){
+            let myDate = date.getDate();
+            let myMonth = date.getMonth() + 1;
+            if(myDate < 10) { myDate = '0'+ myDate;}
+            if(myMonth < 10) { myMonth = '0'+ myMonth;}
+            return (date.getFullYear() + "-" + myMonth + "-" + myDate);
+        }
+    </script>
+</body>
+</html>

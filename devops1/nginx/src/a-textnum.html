@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number & Date</title>
+</head>
+<body>
+    <p id="demo"></p> 
+    <p id="demo2"></p> 
+    <script>
+        let a = 1;
+        document.getElementById("demo").innerHTML += dateToDateText(new Date("2015-03-25"));
+
+        // document.getElementById("demo").innerHTML += "0"+a;
+
+
+        function dateToDateText(date){
+            let myDate = date.getDate();
+            let myMonth = date.getMonth() + 1;
+            if(myDate < 10) { myDate = '0'+ myDate;}
+            if(myMonth < 10) { myMonth = '0'+ myMonth;}
+            document.getElementById("demo2").innerHTML = "Hello Hello"+ myMonth;
+            return (date.getFullYear() + "-" + myMonth + "-" + myDate);             // Function returns the product of a and b
+        }
+    </script>
+</body>
+</html>
